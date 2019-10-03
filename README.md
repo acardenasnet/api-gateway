@@ -21,3 +21,10 @@ You can realize that to call the service we don't use `http` protocol instead we
         .build();
   }
 ```
+
+Now you can test using:
+
+```shell script
+curl -v -X POST -H "Content-Type: application/json" -d '{"subtotal":"100", "coupon":"20DISCCOUNT"}' http://localhost:8080/orders
+curl -v -X GET  http://localhost:8080/orders/1
+```
